@@ -8,7 +8,7 @@ if "user_id" not in st.session_state:
     st.session_state.user_id = None
 
 #Somente para fazer um teste sem depender da chave de acesso.
-teste = True
+teste = False
 
 #Cria um banco de dados usando SQLite que será usado para armazenar as interações e um banco para usuários.
 conn = sqlite3.connect("chat_de_cria.db")
@@ -200,3 +200,4 @@ if st.sidebar.button("Log do chat"):
 if st.sidebar.button("Logout"):
     st.session_state.user_id = None
     st.rerun()
+
